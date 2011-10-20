@@ -1,11 +1,9 @@
-ActsAsMailBalancer
-==================
+= ActsAsMailBalancer
 
-ActsAsMailBalancer is a rails plugin that sends ActionMailer messages using different user accounts to enable you send huge number of message per day.
+ActsAsMailBalancer is a rails plugin that sends ActionMailer messages using different user accounts to enable you send huge number of messages per day.
 
 
-Why ActsAsMailBalancer
-======================
+= Why ActsAsMailBalancer
 
 If you want to send huge amount of mail messages (1000 message for example per day) using ActionMailer, your SMTP may outbound sending limits.
 For example, Google Apps for domain account limits email to 500 per 24 hour period and 100 addresses at a time.
@@ -14,8 +12,7 @@ One solution is to make multiple user accounts (Account_1, Account_2) and send 5
 Mail Balancer tracks every user account usages and keep balancing sent messages over them per day. You can use any number of user accounts to distribute ActionMailer messages.
 
 
-Installation
-============
+= Installation
 
   rails g mail_balancer
   rake db:migrate
@@ -24,21 +21,18 @@ Include your user accounts in vendor/plugins/acts_as_mail_balancer/config/mails.
 
 
 
-Features
-========
+= Features
 
 * Configure ActionMailer to use different user accounts
 * Add any number of user accounts
 * Scaffold views to show you all user accounts statistics including usage count per day
 
 
-WARNING
-=======
+= WARNING
 
 Don't forget to add admin authorization to mail_balancers_controller to prevent NOT admin users from accessing this controller actions.
 
 
-COPYRIGHT
-=========
+= COPYRIGHT
 
 Copyright (c) 2011 [Mahmoud Khaled], released under the MIT license
