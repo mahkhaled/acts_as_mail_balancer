@@ -15,12 +15,16 @@ Mail Balancer tracks every user account usages and keep balancing sent messages 
 = Installation
 
 First,
+
+  rails plugin install git@github.com:mahkhaled/acts_as_mail_balancer.git
+
+Then,
   
   # generate migration to create mail_balancers table
   rails g mail_balancer
   rake db:migrate
 
-Second, include your user accounts in vendor/plugins/acts_as_mail_balancer/config/mails.yml
+Finally, include your user accounts in vendor/plugins/acts_as_mail_balancer/config/mails.yml
 
 
 
