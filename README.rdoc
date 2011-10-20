@@ -26,6 +26,27 @@ Then,
 
 Finally, include your user accounts in vendor/plugins/acts_as_mail_balancer/config/mails.yml
 
+  development: &development
+    mails:
+      mail_1:
+        user_name: "no-reply1@mydomain.com"
+        password: "no-reply1_password"
+      mail_2:
+        user_name: "no-reply2@mydomain.com"
+        password: "no-reply2_password"
+      mail_3:
+        user_name: "no-reply1@anotherdomain.com"
+        password: "no-reply1_password"
+      mail_4:
+        user_name: "no-reply2@anotherdomain.com"
+        password: "no-reply2_password"
+      
+      
+  production:
+    <<: *development
+    
+  staging:
+    <<: *developm
 
 
 = Features
